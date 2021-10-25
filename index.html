@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <script src="mask.js"></script>
+
+</head>
+<body>
+    <form id= "form1" class="form">
+        <div class="title"> Formulário de Cadastro </div>
+        <div class="campos">
+             <label class="campoName"> Nome: </label>
+             <input type="text" id="Nome" name="Nome" placeholder="Nome Completo" class="campoInput formEntry required" required> 
+        </div>
+
+        <div class="campos">
+            <label>Data de Nascimento: </label>
+            <input type="text" id="dtNascimento" name="dtNascimento" placeholder="Data de Nascimento" maxlength="10" class="campoInput formEntry" onkeypress="mascara(this,MascaraData)"> 
+        </div>
+
+        <div class="campos">
+            <label>CPF: </label> 
+            <input type="text" id="cpf" name="ao_cpf" placeholder="Informe seu CPF" maxlength="14" class="campoInput formEntry required" onblur="ValidaCPF();"/>
+        </div>
+
+        <div class="campos">
+        <label>RG: </label>
+            <input type="text" id="rg" name="rg" placeholder="Informe seu RG" class="campoInput formEntry" >
+        </div>
+
+        <div class="campos">
+            <label>Sexo:</label> 
+            <input type="radio" id="sexo" name="sexo" value="M">
+            <label>M</label>
+            <input type="radio" id="sexo" name="sexo" value="F">
+            <label>F</label>
+                
+        </div>
+
+        <div class="campos">
+            <label>CEP: </label>
+            <input type="text" id="cep" name="cep" placeholder="Informe seu CEP">
+        </div>
+
+        <div class="campos">
+            <label>Endereço: </label>
+            <input type="text" id="endereco" name="endereco" placeholder="Informe seu Endereço" class="campoInput formEntry required" required >
+        </div>
+
+        <div class="campos">
+            <label>Número: </label>
+            <input type="text" id="num" name="num" placeholder="Número" class="campoInput formEntry" > 
+        </div>
+
+        <div class="campos">
+            <label>Complemento: </label>
+            <input type="text" id="complemento" name="complemento" class="campoInput formEntry" >
+        </div>
+
+        <div class="campos">
+            <label>Bairro: </label>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" class="campoInput formEntry" >
+        </div>
+       
+        <div class="campos">
+            <label>Estado: </label>
+            <select name="uf" id="uf" class="campoInput formEntry">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goias</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondonia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+
+            </select>
+            <br>
+        </div>            
+
+        <div class="campos">
+            <label>Cidade: </label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" class="campoInput formEntry" > 
+        </div>         
+          
+        <div class="campos">
+            <label>Telefone Fixo:</label>
+            <input type="tel" id="tel_fixo" name="tel_fixo" placeholder="Telefone Fixo" class="campoInput formEntry required" maxlength="15" required onkeypress="this, MascaraTelefone">
+        </div>
+
+        <div class="campos">
+            <label>Telefone Celular:</label>
+            <input type="tel" id="tel_celular" name="tel_celular" placeholder="Telefone Celular"  class="campoInput formEntry required" maxlength="15" required onkeypress="this, MascaraTelefone">
+        </div>
+
+        <div class="campos">
+            <label>E-mail: </label>
+            <input type="email" id="email" name="email" placeholder="Informe seu E-mail"  class="campoInput formEntry"  class="email">
+        </div>
+            
+            <input type="button" value="Cadastrar" class="submit" onclick="validaCampos()"/> 
+        </form>
+    
+              
+    
+    </body>
+</html>
